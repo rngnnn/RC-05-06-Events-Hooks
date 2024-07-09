@@ -29,12 +29,7 @@ const Hooks = () => {
     renk: "red",
   });
 
-
-
-
-
-
-const[toggle,setToggle]=useState(true)
+  const [toggle, setToggle] = useState(true);
 
   const arttir = () => {
     //    sayac=sayac+1
@@ -43,58 +38,43 @@ const[toggle,setToggle]=useState(true)
   };
 
   //!1.yol
-//   const changeAll = () => {
-//     if (kisi.isim === "mustafa") {
-//       setKisi({ isim: "erkan", meslek: "Full-stack", yas: 35, renk: "green" });
-//     } else {
-//       setKisi({
-//         isim: "mustafa",
-//         meslek: "developer",
-//         yas: 45,
-//         renk: "red",
-//       });
-//     }
-//   };
+  //   const changeAll = () => {
+  //     if (kisi.isim === "mustafa") {
+  //       setKisi({ isim: "erkan", meslek: "Full-stack", yas: 35, renk: "green" });
+  //     } else {
+  //       setKisi({
+  //         isim: "mustafa",
+  //         meslek: "developer",
+  //         yas: 45,
+  //         renk: "red",
+  //       });
+  //     }
+  //   };
 
-// 2.yol
-
-const changeAll=()=>{
-    if(!toggle){
+  //!2.yol
+  const changeAll = () => {
+    setToggle(!toggle)
     
-        setKisi({ isim: "mustafa",
-            meslek: "developer",
-            yas: 45,
-            renk: "red",
-    
-    
-        })
-    }else{
-    
+    if (!toggle) {
+      setKisi({
+        isim: "mustafa",
+        meslek: "developer",
+        yas: 45,
+        renk: "red",
+      });
+    }else  {
         setKisi({
-            isim: "erkan",
-            meslek: "fullstack",
-            yas: 35,
-            renk: "green",
-        })
+        isim: "erkan",
+        meslek: "Fullstack",
+        yas: 35,
+        renk: "green",
+      })
     }
-    
-    
-      }
+  };
 
-
-
-
-
-
-
-
-
-
-
-const changeName=()=>{
-
-    setKisi({...kisi, isim:"osman", renk:"blue"})
-}
+  const changeName = () => {
+    setKisi({ ...kisi, isim: "osman", renk: "blue" });
+  };
 
   return (
     <div className="container text-center">
